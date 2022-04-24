@@ -1,0 +1,16 @@
+C:\Users\newso\switchDemo\switchMenu\obj\Debug\net5.0\switchMenu.csproj.AssemblyReference.cache
+C:\Users\newso\switchDemo\switchMenu\obj\Debug\net5.0\switchMenu.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\newso\switchDemo\switchMenu\obj\Debug\net5.0\switchMenu.AssemblyInfoInputs.cache
+C:\Users\newso\switchDemo\switchMenu\obj\Debug\net5.0\switchMenu.AssemblyInfo.cs
+C:\Users\newso\switchDemo\switchMenu\obj\Debug\net5.0\switchMenu.csproj.CoreCompileInputs.cache
+C:\Users\newso\switchDemo\switchMenu\bin\Debug\net5.0\switchMenu.exe
+C:\Users\newso\switchDemo\switchMenu\bin\Debug\net5.0\switchMenu.deps.json
+C:\Users\newso\switchDemo\switchMenu\bin\Debug\net5.0\switchMenu.runtimeconfig.json
+C:\Users\newso\switchDemo\switchMenu\bin\Debug\net5.0\switchMenu.runtimeconfig.dev.json
+C:\Users\newso\switchDemo\switchMenu\bin\Debug\net5.0\switchMenu.dll
+C:\Users\newso\switchDemo\switchMenu\bin\Debug\net5.0\switchMenu.pdb
+C:\Users\newso\switchDemo\switchMenu\obj\Debug\net5.0\switchMenu.dll
+C:\Users\newso\switchDemo\switchMenu\obj\Debug\net5.0\refint\switchMenu.dll
+C:\Users\newso\switchDemo\switchMenu\obj\Debug\net5.0\switchMenu.pdb
+C:\Users\newso\switchDemo\switchMenu\obj\Debug\net5.0\switchMenu.genruntimeconfig.cache
+C:\Users\newso\switchDemo\switchMenu\obj\Debug\net5.0\ref\switchMenu.dll
