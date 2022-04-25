@@ -24,7 +24,7 @@ case $ch in
     res=$((a - b)) 
     ;;
   3)
-    res=$((a \* b)) 
+    res=$((a * b)) 
     ;;
   4) if [ $b == 0 ]; then
       echo "$b is 0 or some other arithmetic error occurred" Select
