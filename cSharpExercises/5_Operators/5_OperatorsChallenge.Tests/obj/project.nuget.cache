@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ID1pvFHUqngfFFNgU76qBtKsHZthvuX3JMNARae1aQWDAS2APWiJ9ymW7UAQ51KJiVWbOpbCx3OguoOudkh9JA==",
+  "dgSpecHash": "nB2zCecAVnhe8h+qEEFJIiNUQK5NSBJ1sYT61Yq7Nf3WSAywToLnMBjJXn2pM4omsUv9SxxIJCgwzFQYAxRZbQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\5_Operators\\5_OperatorsChallenge.Tests\\5_OperatorsChallenge.Tests.csproj",
+  "projectFilePath": "C:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\5_Operators\\5_OperatorsChallenge.Tests\\5_OperatorsChallenge.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\newso\\.nuget\\packages\\microsoft.codecoverage\\15.9.0\\microsoft.codecoverage.15.9.0.nupkg.sha512",
     "C:\\Users\\newso\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",

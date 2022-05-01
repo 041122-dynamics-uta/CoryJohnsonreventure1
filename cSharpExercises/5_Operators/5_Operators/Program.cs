@@ -6,7 +6,7 @@ namespace _5_OperatorsChallenge
     {
         public static void Main(string[] args)
         {
-
+            
         }
 
         /// <summary>
@@ -17,7 +17,8 @@ namespace _5_OperatorsChallenge
         public static int Increment(int num)
         {
             //throw new NotImplementedException($"Increment() is not implemented yet.");
-            return num++;
+            
+            return ++num;
         }
 
         /// <summary>
@@ -28,7 +29,8 @@ namespace _5_OperatorsChallenge
         public static int Decrement(int num)
         {
             //throw new NotImplementedException($"Decrement() is not implemented yet");
-            return num--;
+            
+            return --num;
         }
 
         /// <summary>
@@ -39,7 +41,7 @@ namespace _5_OperatorsChallenge
         public static bool Not(bool input)
         {
             //throw new NotImplementedException($"Not() is not implemented yet");
-            input = true;
+            
             return !input;
         }
 
@@ -51,6 +53,7 @@ namespace _5_OperatorsChallenge
         public static int Negate(int num)
         {
             //throw new NotImplementedException($"Negate() is not implemented yet");
+            
             return num * -1;
 
         }
@@ -64,8 +67,8 @@ namespace _5_OperatorsChallenge
         public static int Sum(int num1, int num2)
         {
             //throw new NotImplementedException($"Sum() is not implemented yet");
-    
-            return num1 + num2;
+            int sol = num1 + num2;
+            return sol;
         }
 
         /// <summary>
@@ -77,8 +80,10 @@ namespace _5_OperatorsChallenge
         public static int Diff(int num1, int num2)
         {
             //throw new NotImplementedException($"Diff() is not implemented yet");
-              return num1 - num2;
+              int sol = num1 - num2;
+            return sol;
         }
+        
 
         /// <summary>
         /// This method takes two ints and returns the product 
@@ -89,7 +94,9 @@ namespace _5_OperatorsChallenge
         public static int Product(int num1, int num2)
         {
             //throw new NotImplementedException($"Product() is not implemented yet");
-              return num1 * num2;
+              int sol = num1 * num2;
+            return sol;
+        
         }
 
         /// <summary>
@@ -101,7 +108,9 @@ namespace _5_OperatorsChallenge
         public static int Quotient(int num1, int num2)
         {
             //throw new NotImplementedException($"Quotient() is not implemented yet");
-              return num1 / num2;
+              int Q = num1 / num2;
+            return Q;
+        
         }
 
         /// <summary>
@@ -113,7 +122,8 @@ namespace _5_OperatorsChallenge
         public static int Remainder(int num1, int num2)
         {
             //throw new NotImplementedException($"Remainder() is not implemented yet");
-              return num1 % num2;
+              int sol = num1 % num2;
+              return sol;
         }
 
         /// <summary>
@@ -130,7 +140,8 @@ namespace _5_OperatorsChallenge
             {
                 return true;
             }
-            else return false;
+            else 
+                return false;
         }
 
         /// <summary>
@@ -142,11 +153,12 @@ namespace _5_OperatorsChallenge
         public static bool Or(int num1, int num2)
         {
             //throw new NotImplementedException($"Or() is not implemented yet");
-            if(num1 > num2 || num1 > 0)
+            if(num1 > num2 || num1 < 0)
             {
                 return true;
             }
-            else return false;
+            else 
+                return false;
         }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\3_DataTypeAndVariables\\3_DataTypeAndVariables.Tests\\3_DataTypeAndVariablesChallenge.Tests.csproj": {}
+    "C:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\3_DataTypeAndVariables\\3_DataTypeAndVariables.Tests\\3_DataTypeAndVariablesChallenge.Tests.csproj": {}
   },
   "projects": {
-    "c:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\3_DataTypeAndVariables\\3_DataTypeAndVariables.Tests\\3_DataTypeAndVariablesChallenge.Tests.csproj": {
+    "C:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\3_DataTypeAndVariables\\3_DataTypeAndVariables.Tests\\3_DataTypeAndVariablesChallenge.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\3_DataTypeAndVariables\\3_DataTypeAndVariables.Tests\\3_DataTypeAndVariablesChallenge.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\3_DataTypeAndVariables\\3_DataTypeAndVariables.Tests\\3_DataTypeAndVariablesChallenge.Tests.csproj",
         "projectName": "3_DataTypeAndVariablesChallenge.Tests",
-        "projectPath": "c:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\3_DataTypeAndVariables\\3_DataTypeAndVariables.Tests\\3_DataTypeAndVariablesChallenge.Tests.csproj",
+        "projectPath": "C:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\3_DataTypeAndVariables\\3_DataTypeAndVariables.Tests\\3_DataTypeAndVariablesChallenge.Tests.csproj",
         "packagesPath": "C:\\Users\\newso\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\3_DataTypeAndVariables\\3_DataTypeAndVariables.Tests\\obj\\",
+        "outputPath": "C:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\3_DataTypeAndVariables\\3_DataTypeAndVariables.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "c:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\3_DataTypeAndVariables\\3_DataTypeAndVariables_StudentCopy\\3_DataTypeAndVariablesChallenge.csproj": {
-                "projectPath": "c:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\3_DataTypeAndVariables\\3_DataTypeAndVariables_StudentCopy\\3_DataTypeAndVariablesChallenge.csproj"
+              "C:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\3_DataTypeAndVariables\\3_DataTypeAndVariables_StudentCopy\\3_DataTypeAndVariablesChallenge.csproj": {
+                "projectPath": "C:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\3_DataTypeAndVariables\\3_DataTypeAndVariables_StudentCopy\\3_DataTypeAndVariablesChallenge.csproj"
               }
             }
           }
@@ -80,14 +80,14 @@
         }
       }
     },
-    "c:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\3_DataTypeAndVariables\\3_DataTypeAndVariables_StudentCopy\\3_DataTypeAndVariablesChallenge.csproj": {
+    "C:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\3_DataTypeAndVariables\\3_DataTypeAndVariables_StudentCopy\\3_DataTypeAndVariablesChallenge.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\3_DataTypeAndVariables\\3_DataTypeAndVariables_StudentCopy\\3_DataTypeAndVariablesChallenge.csproj",
+        "projectUniqueName": "C:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\3_DataTypeAndVariables\\3_DataTypeAndVariables_StudentCopy\\3_DataTypeAndVariablesChallenge.csproj",
         "projectName": "3_DataTypeAndVariablesChallenge",
-        "projectPath": "c:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\3_DataTypeAndVariables\\3_DataTypeAndVariables_StudentCopy\\3_DataTypeAndVariablesChallenge.csproj",
+        "projectPath": "C:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\3_DataTypeAndVariables\\3_DataTypeAndVariables_StudentCopy\\3_DataTypeAndVariablesChallenge.csproj",
         "packagesPath": "C:\\Users\\newso\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\3_DataTypeAndVariables\\3_DataTypeAndVariables_StudentCopy\\obj\\",
+        "outputPath": "C:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\3_DataTypeAndVariables\\3_DataTypeAndVariables_StudentCopy\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

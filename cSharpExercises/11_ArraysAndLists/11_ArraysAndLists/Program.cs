@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace _11_ArraysAndListsChallenge
 {
@@ -74,7 +75,7 @@ namespace _11_ArraysAndListsChallenge
                 if(yourScore > scores[i])
                     scores.Add(i);
 
-            return myArray1;
+            return scores[yourScore];
         }
 
         /// <summary>
@@ -86,7 +87,22 @@ namespace _11_ArraysAndListsChallenge
         /// <returns></returns>
         public static bool FindStringInList(List<string> myArray2, string word)
         {
-            throw new NotImplementedException("FindStringInList has not been implemented yet.");
+            //throw new NotImplementedException("FindStringInList has not been implemented yet.");
+            
+               
+                
+                
+                    if( myArray2.Any(word => myArray2.Contains(word)))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                
+
+            
         }
     }//EoP
 }// EoN

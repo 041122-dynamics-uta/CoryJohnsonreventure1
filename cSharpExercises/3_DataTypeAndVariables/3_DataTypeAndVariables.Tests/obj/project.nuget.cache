@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rjNn5xXxaXnykDfJdwBxxzvhVAdA4lUO6YA4iFvHnk/bOGW1m5Gbe0PDQvmJmYih0tDq5rIteViujRNq/a9ddA==",
+  "dgSpecHash": "UbDjYUDRyqAPx6wC3LZA5FBATWLJql9SP4JNl4MbA037x5IqEnQO3O0RV8B2RT7o8XSsyMUaotulTr6BFUT9gQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\3_DataTypeAndVariables\\3_DataTypeAndVariables.Tests\\3_DataTypeAndVariablesChallenge.Tests.csproj",
+  "projectFilePath": "C:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\3_DataTypeAndVariables\\3_DataTypeAndVariables.Tests\\3_DataTypeAndVariablesChallenge.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\newso\\.nuget\\packages\\microsoft.codecoverage\\15.9.0\\microsoft.codecoverage.15.9.0.nupkg.sha512",
     "C:\\Users\\newso\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",

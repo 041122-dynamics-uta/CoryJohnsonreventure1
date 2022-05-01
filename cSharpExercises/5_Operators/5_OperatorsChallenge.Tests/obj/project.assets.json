@@ -6953,11 +6953,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\5_Operators\\5_OperatorsChallenge.Tests\\5_OperatorsChallenge.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\5_Operators\\5_OperatorsChallenge.Tests\\5_OperatorsChallenge.Tests.csproj",
       "projectName": "5_OperatorsChallenge.Tests",
-      "projectPath": "c:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\5_Operators\\5_OperatorsChallenge.Tests\\5_OperatorsChallenge.Tests.csproj",
+      "projectPath": "C:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\5_Operators\\5_OperatorsChallenge.Tests\\5_OperatorsChallenge.Tests.csproj",
       "packagesPath": "C:\\Users\\newso\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\5_Operators\\5_OperatorsChallenge.Tests\\obj\\",
+      "outputPath": "C:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\5_Operators\\5_OperatorsChallenge.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6978,8 +6978,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "c:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\5_Operators\\5_Operators\\5_Operators.csproj": {
-              "projectPath": "c:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\5_Operators\\5_Operators\\5_Operators.csproj"
+            "C:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\5_Operators\\5_Operators\\5_Operators.csproj": {
+              "projectPath": "C:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\5_Operators\\5_Operators\\5_Operators.csproj"
             }
           }
         }
