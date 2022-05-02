@@ -59,10 +59,6 @@ namespace _4_MethodsChallenge
         public static double DoAction(double x, double y, int action)
         {
             //throw new NotImplementedException("DoAction() is not implemented yet");
-           
-                //x = Convert.ToDouble(Console.ReadLine());
-                //y = Convert.ToDouble(Console.ReadLine());
-                //action = Convert.ToInt32(Console.ReadLine());
                 
                
           
@@ -71,14 +67,15 @@ namespace _4_MethodsChallenge
                 action = 1;
                 
                 
-                if(x == 1 && y == 1 && action == 1)
+                 if(action == 0)
                 {
-                    return (double)action;
-                }
+                    Console.Write(action);
+                 }
                 else
                 {
-                    throw new FormatException("Format Exception"); 
+                    throw new FormatException("FormatException"); 
                 }
+    
           
              
              

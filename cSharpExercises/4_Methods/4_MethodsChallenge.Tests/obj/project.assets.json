@@ -2118,16 +2118,6 @@
         "build": {
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
-      },
-      "4_Methods/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/4_Methods.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/4_Methods.dll": {}
-        }
       }
     }
   },
@@ -6931,16 +6921,10 @@
         "xunit.runner.visualstudio.2.4.1.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
-    },
-    "4_Methods/1.0.0": {
-      "type": "project",
-      "path": "../4_Methods/4_Methods.csproj",
-      "msbuildProject": "../4_Methods/4_Methods.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "4_Methods >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 15.9.0",
       "xunit >= 2.4.1",
       "xunit.runner.visualstudio >= 2.4.1"
@@ -6977,11 +6961,7 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {
-            "C:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\4_Methods\\4_Methods\\4_Methods.csproj": {
-              "projectPath": "C:\\Users\\newso\\CoryJohnsonreventure1\\cSharpExercises\\4_Methods\\4_Methods\\4_Methods.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
