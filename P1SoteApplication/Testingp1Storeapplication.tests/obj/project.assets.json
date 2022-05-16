@@ -1790,6 +1790,64 @@
         "build": {
           "build/netcoreapp2.1/xunit.runner.visualstudio.props": {}
         }
+      },
+      "P1FrontEnd/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "P1Repository": "1.0.0",
+          "P1StoreBusiness": "1.0.0",
+          "P1StoreDomain": "1.0.0",
+          "System.Data.SqlClient": "4.8.3"
+        },
+        "compile": {
+          "bin/placeholder/P1FrontEnd.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/P1FrontEnd.dll": {}
+        }
+      },
+      "P1Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "P1StoreDomain": "1.0.0",
+          "System.Data.SqlClient": "4.8.3"
+        },
+        "compile": {
+          "bin/placeholder/P1Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/P1Repository.dll": {}
+        }
+      },
+      "P1StoreBusiness/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "P1Repository": "1.0.0",
+          "P1StoreDomain": "1.0.0",
+          "System.Data.SqlClient": "4.8.3"
+        },
+        "compile": {
+          "bin/placeholder/P1StoreBusiness.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/P1StoreBusiness.dll": {}
+        }
+      },
+      "P1StoreDomain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "System.Data.SqlClient": "4.8.3"
+        },
+        "compile": {
+          "bin/placeholder/P1StoreDomain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/P1StoreDomain.dll": {}
+        }
       }
     }
   },
@@ -6380,11 +6438,32 @@
         "xunit.runner.visualstudio.2.4.3.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "P1FrontEnd/1.0.0": {
+      "type": "project",
+      "path": "../P1FrontEnd/P1FrontEnd.csproj",
+      "msbuildProject": "../P1FrontEnd/P1FrontEnd.csproj"
+    },
+    "P1Repository/1.0.0": {
+      "type": "project",
+      "path": "../P1Repository/P1Repository.csproj",
+      "msbuildProject": "../P1Repository/P1Repository.csproj"
+    },
+    "P1StoreBusiness/1.0.0": {
+      "type": "project",
+      "path": "../P1StoreBusiness/P1StoreBusiness.csproj",
+      "msbuildProject": "../P1StoreBusiness/P1StoreBusiness.csproj"
+    },
+    "P1StoreDomain/1.0.0": {
+      "type": "project",
+      "path": "../P1StoreDomain/P1StoreDomain.csproj",
+      "msbuildProject": "../P1StoreDomain/P1StoreDomain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.NET.Test.Sdk >= 16.11.0",
+      "P1FrontEnd >= 1.0.0",
       "System.Data.SqlClient >= 4.8.3",
       "coverlet.collector >= 3.1.0",
       "xunit >= 2.4.1",
@@ -6398,11 +6477,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\Testingp1Storeapplication.tests\\Testingp1Storeapplication.tests.csproj",
+      "projectUniqueName": "C:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\Testingp1Storeapplication.tests\\Testingp1Storeapplication.tests.csproj",
       "projectName": "Testingp1Storeapplication.tests",
-      "projectPath": "c:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\Testingp1Storeapplication.tests\\Testingp1Storeapplication.tests.csproj",
+      "projectPath": "C:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\Testingp1Storeapplication.tests\\Testingp1Storeapplication.tests.csproj",
       "packagesPath": "C:\\Users\\newso\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\Testingp1Storeapplication.tests\\obj\\",
+      "outputPath": "C:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\Testingp1Storeapplication.tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6416,12 +6495,17 @@
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1FrontEnd\\P1FrontEnd.csproj": {
+              "projectPath": "C:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1FrontEnd\\P1FrontEnd.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

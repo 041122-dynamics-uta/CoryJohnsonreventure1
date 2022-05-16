@@ -1,0 +1,12 @@
+C:\Users\newso\CoryJohnsonreventure1\P1SoteApplication\P1StoreDomain\bin\Debug\net6.0\P1StoreDomain.deps.json
+C:\Users\newso\CoryJohnsonreventure1\P1SoteApplication\P1StoreDomain\bin\Debug\net6.0\P1StoreDomain.dll
+C:\Users\newso\CoryJohnsonreventure1\P1SoteApplication\P1StoreDomain\bin\Debug\net6.0\P1StoreDomain.pdb
+C:\Users\newso\CoryJohnsonreventure1\P1SoteApplication\P1StoreDomain\obj\Debug\net6.0\P1StoreDomain.csproj.AssemblyReference.cache
+C:\Users\newso\CoryJohnsonreventure1\P1SoteApplication\P1StoreDomain\obj\Debug\net6.0\P1StoreDomain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\newso\CoryJohnsonreventure1\P1SoteApplication\P1StoreDomain\obj\Debug\net6.0\P1StoreDomain.AssemblyInfoInputs.cache
+C:\Users\newso\CoryJohnsonreventure1\P1SoteApplication\P1StoreDomain\obj\Debug\net6.0\P1StoreDomain.AssemblyInfo.cs
+C:\Users\newso\CoryJohnsonreventure1\P1SoteApplication\P1StoreDomain\obj\Debug\net6.0\P1StoreDomain.csproj.CoreCompileInputs.cache
+C:\Users\newso\CoryJohnsonreventure1\P1SoteApplication\P1StoreDomain\obj\Debug\net6.0\P1StoreDomain.dll
+C:\Users\newso\CoryJohnsonreventure1\P1SoteApplication\P1StoreDomain\obj\Debug\net6.0\refint\P1StoreDomain.dll
+C:\Users\newso\CoryJohnsonreventure1\P1SoteApplication\P1StoreDomain\obj\Debug\net6.0\P1StoreDomain.pdb
+C:\Users\newso\CoryJohnsonreventure1\P1SoteApplication\P1StoreDomain\obj\Debug\net6.0\ref\P1StoreDomain.dll

@@ -13,9 +13,46 @@ namespace P1FrontEnd
         {
             //String username = Console.ReadLine();
             //String secretcode = Console.ReadLine();
+           
             
             MainMenu();
         }
+
+          public static void Login(string username, string password)
+        {
+              username = ""; password ="";string lname = ""; string fname = "";string address = "";
+             P1RepoClass prc = new P1RepoClass();
+
+            P1StoreBusinessClass cb = new P1StoreBusinessClass(prc);
+
+             //Customer currentCustomer = cb.CurrentCustomer(username,password,lname,fname,address);
+              //currentCustomer = cb.CurrentCustomer(username, secretcode);
+             List<Customer> Customers = cb.CustomerList();
+             //Login Attempts counter
+            int loginAttempts = 0;
+
+            //Simple iteration upto three times
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine("Enter username");
+                username = Console.ReadLine();
+                Console.WriteLine("Enter password");
+                 password = Console.ReadLine();
+                //currentCustomer = cb.CurrentCustomer();
+                if (username != "IsValid" || password != "IsValid")
+                    loginAttempts++;
+                else
+                    break;
+             }
+
+            //Display the result
+            if (loginAttempts > 2)
+                Console.WriteLine("Login failure");
+            else
+                Console.WriteLine("Login successful");
+                ShowCustomerInfo();
+        }    
+
 
         public static void MainMenu()
         {
@@ -25,14 +62,14 @@ namespace P1FrontEnd
             Console.WriteLine("2) Sign Up for New Account");
             Console.WriteLine("3) Exit");
             Console.Write("\r\nSelect an option: ");
- 
+            string username = "";string password ="";string lname = ""; string fname = "";string address = "";
             switch (Console.ReadLine())
             {
                 case "1":
-                   Login();
+                   Login(username,password);
                     break;
                 case "2":
-                    RegisterAccount();
+                    RegisterAccount(username,password,lname,fname,address);
                     break;
                 case "3":
                     System.Environment.Exit(1);
@@ -44,48 +81,9 @@ namespace P1FrontEnd
         }
 
         //Login method
-        public static void Login()
-        {
-            //Console.WriteLine("secretcode Masking Console Application");
-            Console.WriteLine("------------------------------------");
-            Console.Write("Enter username: ");
-            string username = Console.ReadLine();
-            string secretcode = Console.ReadLine();
-            Console.Write("Enter Password: ");
-            ConsoleKeyInfo keyInfo;
- 
-            do
-            {
-                keyInfo = Console.ReadKey(true);
-                // Skip if Backspace or Enter is Pressed
-                if (keyInfo.Key != ConsoleKey.Backspace && keyInfo.Key != ConsoleKey.Enter)
-                    {
-                        secretcode += keyInfo.KeyChar;
-                        Console.Write("*");
-                    }
-                else
-                    {
-                        if (keyInfo.Key == ConsoleKey.Backspace && secretcode.Length > 0)
-                        {
-                            // Remove last charcter if Backspace is Pressed
-                            secretcode = secretcode.Substring(0, (secretcode.Length - 1));
-                            Console.Write("b b");
-                        }
-                    }             
-            }
-            // Stops Getting secretcode Once Enter is Pressed
-            while (keyInfo.Key != ConsoleKey.Enter);
-            Console.WriteLine("Welcome " + username +",");
-            StoreOptions();
-            return;
-            //Console.WriteLine();
-            //Console.WriteLine("---------------------------");
-            //Console.WriteLine("Welcome " + username+",");
-            //Console.WriteLine("Your secretcode is : " + secretcode);
-        }    
-
+      
         //Register new Customer Account
-        public static void RegisterAccount()
+        public static void RegisterAccount(string username, string lname, string fname,string address, string secretcode)
         {
             Console.Write("Enter username: ");
             Console.Write("Enter password: ");
@@ -94,15 +92,20 @@ namespace P1FrontEnd
             Console.Write("Enter Last Name: ");
             Console.Write("Enter Address: ");
 
-            string username = Console.ReadLine();
-            string secretcode = Console.ReadLine();
-            string fname = Console.ReadLine();
-            string lname = Console.ReadLine();
-            string address = Console.ReadLine();
+             username = Console.ReadLine();
+             secretcode = Console.ReadLine();
+             fname = Console.ReadLine();
+             lname = Console.ReadLine();
+             address = Console.ReadLine();
 
-            SqlCommand sqlComm = new SqlCommand();
+            //SqlCommand sqlComm = new SqlCommand();
+             P1RepoClass prc = new P1RepoClass();
 
-          sqlComm.CommandText = $" INSERT INTO P1StoreCustomer (Username, LastNanme, FirstName, Address, secretcode)  VALUES (@var)";
+            P1StoreBusinessClass cb = new P1StoreBusinessClass(prc);
+
+              Customer newCustomer = new Customer();
+              Console.Write("Account Created");
+          //sqlComm.CommandText = $" INSERT INTO P1StoreCustomer (Username, LastNanme, FirstName, Address, secretcode)  VALUES (@var)";
           //sqlComm.AddWithValue("@var", username, lname,fname, address, secretcode);
 
         }
@@ -110,29 +113,39 @@ namespace P1FrontEnd
         //Displays the Customer info
         public static void ShowCustomerInfo()
         {
-            string username = Console.ReadLine();
-            string secretcode = Console.ReadLine();
-            string fname = Console.ReadLine();
-            string lname = Console.ReadLine();
-            string address = Console.ReadLine();
+            string username =""; string lname =""; string fname =""; string address = ""; string secretcode ="";
+            P1RepoClass prc = new P1RepoClass();
 
-            SqlCommand sqlComm = new SqlCommand();
+            P1StoreBusinessClass cb = new P1StoreBusinessClass(prc);
 
-          sqlComm.CommandText = $" INSERT INTO P1StoreCustomer (Username, LastNanme, FirstName, Address, secretcode)  VALUES (@var)";
+            //Customer currentCustomer = new Customer();
+            //currentCustomer = cb.CurrentCustomer(username,secretcode,lname,fname,address);
+            List<Customer> Customers = cb.CustomerList();
+            //string username = Console.ReadLine();
+            //string secretcode = Console.ReadLine();
+            //string fname = Console.ReadLine();
+            //string lname = Console.ReadLine();
+            //string address = Console.ReadLine();
+
+             //Customer newCustomer;
+            //SqlCommand sqlComm = new SqlCommand();
+
+          //sqlComm.CommandText = $" SELECT * FROM P1StoreCustomer;";
           //sqlComm.AddWithValue("@var", username, lname,fname, address, secretcode);
             
-            Console.Write(username);
-            Console.Write(lname);
+            Console.WriteLine("Username" + username);
+            //Console.Write();
             //Console.Write("Renter password: ");
             Console.Write(" First name: " + fname);
             Console.Write("Last Name: " + lname);
             Console.Write("Address: " + address);
-            StoreOptions();
+            StoreOptions(username,secretcode);
         }
 
         //Select Store and Find items Logic
-        public static void StoreOptions()
+        public static void StoreOptions(string username, string password)
         {
+             username = "";  password = "";
             //Console.Clear();
             Console.WriteLine("P1 Clearance Store Menu");
              Console.WriteLine("Make a Selection");
@@ -147,20 +160,22 @@ namespace P1FrontEnd
  
             switch (Console.ReadLine())
             {
-                case "1":
-                   Login();
+                case"1":
+                   Login(username, password);
                     break;
                 case "2":
-                    RegisterAccount();
+                    //AddCartFunction;
+                   ShowProducts();
+                   Console.WriteLine("What would you like to buy?");
                     break;
                 case "3":
-                    System.Environment.Exit(1);
+                    ViewCart();
                     break;
                     case "4":
-                   Login();
+                  ShowProducts();
                     break;
                 case "5":
-                    RegisterAccount();
+                    Checkout();
                     break;
                 case "6":
                     Checkout();
@@ -174,6 +189,21 @@ namespace P1FrontEnd
             }   
         }
 
+        public static void AddToCart(int order, string ItemsOrdered, float OrderTotal)
+        {
+                 
+                 ShowProducts();
+              order = 0;
+              
+                 ItemsOrdered = "";
+                 OrderTotal = 0.00f;
+                 order = order + 1;
+                 ItemsOrdered = ""; 
+                 OrderTotal = OrderTotal + 1;
+                
+                  
+        }
+        
         //View Products from store
         public static void ViewCart()
         {
@@ -183,14 +213,14 @@ namespace P1FrontEnd
             Console.WriteLine("2) Back To Customer Account Info");
             Console.WriteLine("3) Exit");
             Console.Write("\r\nSelect an option: ");
- 
+            string username = "" ; string password = "";
             switch (Console.ReadLine())
             {
                 case "1":
                    SelectStore();
                     break;
                 case "2":
-                    StoreOptions();
+                    StoreOptions(username, password);
                     break;
                 case "3":
                     System.Environment.Exit(1);
@@ -204,6 +234,7 @@ namespace P1FrontEnd
        //Shop logic 
         public static void SelectStore()
         {
+            string username = "" ; string password = "";
             Console.Clear();
             Console.WriteLine("Welcome to P1 Clearance Store");
             Console.WriteLine("Select Store");
@@ -218,18 +249,18 @@ namespace P1FrontEnd
             {
                 case "1":
                    //Store 1;
-                   sqlComm.CommandText = $"SELECT * FROM P1StoreDatabase.store1";
+                   sqlComm.CommandText = $"SELECT * FROM * FROM [dbo].[P1StoreProduct] WHERE StoreID = 10";
                     break;
                 case "2":
                     //Store 2;
-                     sqlComm.CommandText = $"SELECT * FROM P1StoreDatabase.store2";
+                     sqlComm.CommandText = $"SELECT * FROM * FROM [dbo].[P1StoreProduct] WHERE StoreID = 15";
                     break;
                 case "3":
                     //Store3;
-                     sqlComm.CommandText = $"SELECT * FROM P1StoreDatabase.store3";
+                     sqlComm.CommandText = $"SELECT * FROM * FROM [dbo].[P1StoreProduct] WHERE StoreID = 20";
                     break;
                  case "4":
-                    StoreOptions();
+                    StoreOptions(username, password);
                     break;
                 case "5":
                      System.Environment.Exit(1);
@@ -243,17 +274,32 @@ namespace P1FrontEnd
 
         public static void ShowProducts()
         {
-            //show products
-            SqlCommand sqlComm = new SqlCommand();
-            sqlComm.CommandText = $"SELECT * FROM P1StoreProducts";
+             P1RepoClass prc = new P1RepoClass();
+
+            P1StoreBusinessClass pb = new P1StoreBusinessClass(prc);
+
+              Product SelectProduct = new Product();
+              Console.WriteLine("ProductID  Itemname     ItemDescription  ItemPrice    ItemQuanity}.....");
+              List<Product> products = pb.ProductList();
+              foreach(Product p in products)
+              {
+                  Console.WriteLine($"{p.ProductID}{p.Itemname}{p.ItemDescription}{p.ItemPrice}{p.ItemQuanity}.....");
+              }
         }
         
         //Make and cancel purchases
         public static void Checkout()
         {
-              int order = 0;
-              string ItemsOrdered = "";
-                float OrderTotal = 0.00f;  
+              
+              string username = ""; string password = "";string ItemsOrdered = ""; float OrderTotal = 0.00f;
+             P1RepoClass prc = new P1RepoClass();
+
+            P1StoreBusinessClass ob = new P1StoreBusinessClass(prc);
+
+              Orders newOrder = ob.NewOrders(ItemsOrdered,OrderTotal);
+              //int orderCount = 0;
+             
+                 
             //Console.Clear();
             Console.WriteLine("Welcome to P1 Clearance Store");
             Console.WriteLine(" Are you sure Sure?");
@@ -261,24 +307,22 @@ namespace P1FrontEnd
             Console.WriteLine("2) NO");
             Console.WriteLine("3) Exit");
             Console.Write("\r\nSelect an option: ");
- 
+                
             switch (Console.ReadLine())
             {
                 case "1":
-                     ItemsOrdered = "";
+                     ItemsOrdered = $"{newOrder.ItemsOrdered}";
                  OrderTotal = 0.00f; 
-                    order= order + 1;
-                   SqlCommand sqlComm = new SqlCommand();
+                    OrderTotal= OrderTotal + float.Parse($"{newOrder.OrderTotal}");
+                    Console.WriteLine("Item Ordered was"+ ItemsOrdered + "and your total is"+ OrderTotal );
+                   //SqlCommand sqlComm = new SqlCommand();
 
-          sqlComm.CommandText = $"INSERT INTO P1StoreOders (ItemsOrdered, OrderTotal ) VALUES (@var)";
+          //sqlComm.CommandText = $"INSERT INTO P1StoreOders (ItemsOrdered, OrderTotal ) VALUES  (@var);";
           //sqlComm.AddWithValue("@var", ItemsOrdered, OrderTotal);
-                    StoreOptions();
+                    StoreOptions(username, password);
                     break;
                 case "2":
-                    StoreOptions();;
-                    break;
-                case "3":
-                    System.Environment.Exit(1);
+                    StoreOptions(username, password);
                     break;
                 default:
                     break;

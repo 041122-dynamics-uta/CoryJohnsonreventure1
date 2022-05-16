@@ -135,7 +135,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "P1StoreDomain": "1.0.0"
+          "P1StoreDomain": "1.0.0",
+          "System.Data.SqlClient": "4.8.3"
         },
         "compile": {
           "bin/placeholder/P1Repository.dll": {}
@@ -498,11 +499,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1StoreBusiness\\P1StoreBusiness.csproj",
+      "projectUniqueName": "C:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1StoreBusiness\\P1StoreBusiness.csproj",
       "projectName": "P1StoreBusiness",
-      "projectPath": "c:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1StoreBusiness\\P1StoreBusiness.csproj",
+      "projectPath": "C:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1StoreBusiness\\P1StoreBusiness.csproj",
       "packagesPath": "C:\\Users\\newso\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1StoreBusiness\\obj\\",
+      "outputPath": "C:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1StoreBusiness\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -516,17 +517,18 @@
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "c:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1Repository\\P1Repository.csproj": {
-              "projectPath": "c:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1Repository\\P1Repository.csproj"
+            "C:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1Repository\\P1Repository.csproj": {
+              "projectPath": "C:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1Repository\\P1Repository.csproj"
             },
-            "c:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1StoreDomain\\P1StoreDomain.csproj": {
-              "projectPath": "c:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1StoreDomain\\P1StoreDomain.csproj"
+            "C:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1StoreDomain\\P1StoreDomain.csproj": {
+              "projectPath": "C:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1StoreDomain\\P1StoreDomain.csproj"
             }
           }
         }

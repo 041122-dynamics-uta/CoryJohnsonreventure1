@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xsZmxRI6BU7mZvYpyzVin0vDKLg+a3RaQrGPh4jjnqJYZePyIhpfLfQKFlh/Zpp1xoofBY2YekPy3kK6eXbw7g==",
+  "dgSpecHash": "k7KSm4851VX6U8UoOEsUly26FXZbX2X9qbjXJuItwY7mnlt6aT2I6TEmSoyv7LnaFm939XO2WQnaXuMjInU49w==",
   "success": true,
-  "projectFilePath": "c:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1StoreDomain\\P1StoreDomain.csproj",
+  "projectFilePath": "C:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1StoreDomain\\P1StoreDomain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\newso\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\newso\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

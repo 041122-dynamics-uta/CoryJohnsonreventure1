@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qdiyP6NtMRlAGPVdddaKeqGcRXP2Qq+KmfDjlVg/HHwQs7TCbKKHykWQf8rYhpJWwZO8lZgSoWBsVB34rRekgQ==",
+  "dgSpecHash": "4/mF8+GogExoZ1riKb5R2/+pLiFCwFxcmoDo3c2bo6BOkGHmg12y3mX6slPYGUn6QxM2IflIdGNXs3ZPBFd1EQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\Testingp1Storeapplication.tests\\Testingp1Storeapplication.tests.csproj",
+  "projectFilePath": "C:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\Testingp1Storeapplication.tests\\Testingp1Storeapplication.tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\newso\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
     "C:\\Users\\newso\\.nuget\\packages\\microsoft.codecoverage\\16.11.0\\microsoft.codecoverage.16.11.0.nupkg.sha512",

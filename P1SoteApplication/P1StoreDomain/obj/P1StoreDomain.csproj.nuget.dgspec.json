@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1StoreDomain\\P1StoreDomain.csproj": {}
+    "C:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1StoreDomain\\P1StoreDomain.csproj": {}
   },
   "projects": {
-    "c:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1StoreDomain\\P1StoreDomain.csproj": {
+    "C:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1StoreDomain\\P1StoreDomain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1StoreDomain\\P1StoreDomain.csproj",
+        "projectUniqueName": "C:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1StoreDomain\\P1StoreDomain.csproj",
         "projectName": "P1StoreDomain",
-        "projectPath": "c:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1StoreDomain\\P1StoreDomain.csproj",
+        "projectPath": "C:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1StoreDomain\\P1StoreDomain.csproj",
         "packagesPath": "C:\\Users\\newso\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1StoreDomain\\obj\\",
+        "outputPath": "C:\\Users\\newso\\CoryJohnsonreventure1\\P1SoteApplication\\P1StoreDomain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -25,6 +25,7 @@
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

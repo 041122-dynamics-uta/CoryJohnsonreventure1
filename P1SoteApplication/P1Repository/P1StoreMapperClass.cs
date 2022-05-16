@@ -34,7 +34,7 @@ namespace P1Repository
             };
             return s;
         }
-        internal Product P1StoreProduct(SqlDataReader reader)
+        internal Product DboToP1StoreProduct(SqlDataReader reader)
         {
             Product p = new Product
             {
@@ -48,6 +48,21 @@ namespace P1Repository
             };
             return p;
         }
+
+        internal Orders DboToP1StoreOrders(SqlDataReader reader)
+        {
+                Orders o = new Orders
+            {
+                Orderid = (int)reader[0],
+                ItemsOrdered = (string)reader[1],
+                OrderTotal = (float)reader[2],
+                
+
+               
+            };
+            return o;
+        }
+    
     }
 
     
