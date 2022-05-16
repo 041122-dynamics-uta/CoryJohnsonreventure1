@@ -7,27 +7,27 @@ using P1Repository;
 
 namespace P1FrontEnd
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             //String username = Console.ReadLine();
             //String secretcode = Console.ReadLine();
            
             
-            MainMenu();
+            //MainMenu();
         }
 
-          public static void Login(string username, string password)
+        public static void Login(string username, string secretcode)
         {
-              username = ""; password ="";string lname = ""; string fname = "";string address = "";
+              username = ""; secretcode ="";string lname = ""; string fname = "";string address = "";
              P1RepoClass prc = new P1RepoClass();
 
             P1StoreBusinessClass cb = new P1StoreBusinessClass(prc);
 
-             //Customer currentCustomer = cb.CurrentCustomer(username,password,lname,fname,address);
-              //currentCustomer = cb.CurrentCustomer(username, secretcode);
-             List<Customer> Customers = cb.CustomerList();
+            Customer currentCustomer = cb.CurrentCustomer(username,secretcode,lname,fname,address);
+            //  currentCustomer = cb.CurrentCustomer(username, secretcode);
+            // List<Customer> Customers = cb.CustomerList();
              //Login Attempts counter
             int loginAttempts = 0;
 
@@ -37,9 +37,9 @@ namespace P1FrontEnd
                 Console.WriteLine("Enter username");
                 username = Console.ReadLine();
                 Console.WriteLine("Enter password");
-                 password = Console.ReadLine();
+                 secretcode = Console.ReadLine();
                 //currentCustomer = cb.CurrentCustomer();
-                if (username != "IsValid" || password != "IsValid")
+                if (username != "IsValid" || secretcode != "IsValid")
                     loginAttempts++;
                 else
                     break;
@@ -105,6 +105,7 @@ namespace P1FrontEnd
 
               Customer newCustomer = new Customer();
               Console.Write("Account Created");
+              StoreOptions(username, secretcode);
           //sqlComm.CommandText = $" INSERT INTO P1StoreCustomer (Username, LastNanme, FirstName, Address, secretcode)  VALUES (@var)";
           //sqlComm.AddWithValue("@var", username, lname,fname, address, secretcode);
 
@@ -119,8 +120,8 @@ namespace P1FrontEnd
             P1StoreBusinessClass cb = new P1StoreBusinessClass(prc);
 
             //Customer currentCustomer = new Customer();
-            //currentCustomer = cb.CurrentCustomer(username,secretcode,lname,fname,address);
-            List<Customer> Customers = cb.CustomerList();
+            Customer currentCustomer = cb.CurrentCustomer(username,secretcode,lname,fname,address);
+            //List<Customer> Customers = cb.CustomerList();
             //string username = Console.ReadLine();
             //string secretcode = Console.ReadLine();
             //string fname = Console.ReadLine();
@@ -133,12 +134,12 @@ namespace P1FrontEnd
           //sqlComm.CommandText = $" SELECT * FROM P1StoreCustomer;";
           //sqlComm.AddWithValue("@var", username, lname,fname, address, secretcode);
             
-            Console.WriteLine("Username" + username);
+            Console.WriteLine("Username" + $"{currentCustomer.Username}");
             //Console.Write();
             //Console.Write("Renter password: ");
-            Console.Write(" First name: " + fname);
-            Console.Write("Last Name: " + lname);
-            Console.Write("Address: " + address);
+            Console.Write(" First name: " + $"{currentCustomer.FirstName}");
+            Console.Write("Last Name: " + $"{currentCustomer.LastName}");
+            Console.Write("Address: " + $"{currentCustomer.Address}");
             StoreOptions(username,secretcode);
         }
 

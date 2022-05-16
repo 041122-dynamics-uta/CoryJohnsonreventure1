@@ -1,30 +1,29 @@
 using Xunit;
 using System.Collections.Generic;
 using P1FrontEnd;
+//using Microsoft.VisualStudio.TestPlatform.TestHost;
 
-
-
-namespace Testingp1Storeapplication.tests;
-
-public class UnitTest1
-{   
+namespace Testingp1Storeapplication.tests
+{ /**
+    public class UnitTest1
+    {   
      
 
-        [Theory]
+        [Fact]
     
         
       
-
+       
         public static void LoginCheckSuccess()
         {
              //Arrange
-             string s1 = "JCEvans";
-             string s2 = "123Way2G0";
-           
-            
+              string s1 = "JCEvans";
+              string s2 = "123Way2G0";
+
+
 
             //Act
-            string result = Program.Login(s1,s2);
+            string result = Program.Login(s1, s2);
             string expected = "Login successful";
             
 
@@ -32,6 +31,7 @@ public class UnitTest1
             Assert.Equal(expected , result);  
         }
 
+        [Fact]
         public static void RegisterAccount()
         {
                //Arrange
@@ -44,21 +44,16 @@ public class UnitTest1
            
             
 
-            //Act
-            string result = Program.RegisterAccount(s1,s2,s3,s4,s5);
-            string expected = "Account Created";
+                //Act
+                string result = Program.RegisterAccount(s1,s2,s3,s4,s5);
+                string expected = "Account Created";
             
 
-            //Assert
-            Assert.Equal(expected , result);  
+                //Assert
+                Assert.Equal(expected , result);  
         }
+        
+    }**/
 
-        //public static void StoreOptions()
-        //{}
-
-        //public static void SelectStore()
-        //{}
-
-        //public static void Checkout()
-        //{}
 }
+
