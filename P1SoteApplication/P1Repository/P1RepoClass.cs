@@ -19,7 +19,7 @@ namespace P1Repository
 
 
         //Customer
-        public Customer NewCustomer(string username, string LastName, string FirstName,string address, string secretcode)
+        public Customer NewCustomer(string Username, string LastName, string FirstName,string Address, string secretcode)
         {
                 string myQuery1 = $"INSERT INTO P1StoreCustomer (Username, LastNanme, FirstName, Address, secretcode)VALUES (@U, @L, @F,@a,@s);";
             //this using block creates teh SqlConnection.
@@ -28,10 +28,10 @@ namespace P1Repository
             {
              //The SqlCommand object uses the query text along with the SqlConnection object to open a connection and send the query.
                 SqlCommand command = new SqlCommand(myQuery1, query1);
-                command.Parameters.AddWithValue("@U", username);
+                command.Parameters.AddWithValue("@U", Username);
                 command.Parameters.AddWithValue("@L", LastName);
                 command.Parameters.AddWithValue("@F", FirstName);
-                command.Parameters.AddWithValue("@a", address);
+                command.Parameters.AddWithValue("@a", Address);
                 command.Parameters.AddWithValue("@s", secretcode);
                 command.Connection.Open();//open the connection to the Db
                int results = command.ExecuteNonQuery();//actually conduct the query.
@@ -41,11 +41,11 @@ namespace P1Repository
                 {
                     Customer c = new Customer
                     {
-                        CustomerID = 100,
-                        Username = username,
+                        CustomerID = 1,
+                        Username = Username,
                         LastName = LastName,
                         FirstName = FirstName,
-                        Address = address,
+                        Address = Address,
                         secretcode = secretcode
 
                     };
@@ -55,40 +55,30 @@ namespace P1Repository
                 
         }
 
-        public Customer CurrentCustomer(string username, string LastName, string FirstName,string address, string secretcode)
+        public Customer CurrentCustomer(String Username)
         {
-                string myQuery1 =  $"SELECT * FROM P1StoreCustomer WhHERE Username = @U;";
-            //this using block creates teh SqlConnection.
+                string myQuery1 =  $"SELECT * FROM dbo.P1StoreCustomer ;";
+            //this using block creates teh SqlConnection...string LastName, string FirstName,string Address, string secretcode
             // the SqlConnection is the object that communicates with the Db.
             using (SqlConnection query1 = new SqlConnection(connectionString))
             {
              //The SqlCommand object uses the query text along with the SqlConnection object to open a connection and send the query.
                 SqlCommand command = new SqlCommand(myQuery1, query1);
-                command.Parameters.AddWithValue("@U", username);
-                command.Parameters.AddWithValue("@L", LastName);
-                command.Parameters.AddWithValue("@F", FirstName);
-                command.Parameters.AddWithValue("@a", address);
-                command.Parameters.AddWithValue("@s", secretcode);
                 command.Connection.Open();//open the connection to the Db
-               int results = command.ExecuteNonQuery();//actually conduct the query.
+                SqlDataReader results = command.ExecuteReader();//actually conduct the query.
+
+                //query the FamilyRepository Db for the list of members
+                //USE ADO.NET .........
+                //use the mapper to transfer the falues in to Member objects in a List<Member>.
+                Customer cl = new Customer();
+                while (results.Read())
+                {
+                    cl.Equals(this._mapper.DboToP1StoreCustomer(results));//send in the row of the reader to be mapped.
+                }
 
                 query1.Close();
-                if(results == 1)
-                {
-                    Customer c = new Customer
-                    {
-                        CustomerID = 100,
-                        Username = username,
-                        LastName = LastName,
-                        FirstName = FirstName,
-                        Address = address,
-                        secretcode = secretcode
-
-                    };
-                    return c;
-                }
-            }   return null;
-                
+                return cl;
+            }   
         }
         
          public List<Customer> CustomersList()
