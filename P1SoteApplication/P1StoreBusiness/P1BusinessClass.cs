@@ -42,9 +42,9 @@ public class P1StoreBusinessClass
         return cl;
     }
 
-     public Customer CurrentCustomer(String Username)
+     public Customer CurrentCustomer(String Username, String LastName,String FirstName,String Address, String secretcode)
     {
-        Customer cl = _repo.CurrentCustomer(Username);
+        Customer cl = _repo.CurrentCustomer(Username, LastName,FirstName,Address,secretcode);
         return cl;
     }
 }

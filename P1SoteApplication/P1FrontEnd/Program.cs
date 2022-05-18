@@ -28,7 +28,7 @@ namespace P1FrontEnd
                 switch (Console.ReadLine())
                 {
                     case "1":
-                        Login();
+                        Login(username,password);
                         break;
                     case "2":
                         RegisterAccount(username,password,lname,fname,address);
@@ -53,7 +53,7 @@ namespace P1FrontEnd
             bool moveOn = false;// this is to signify that the user correctly entered the value.
             while (moveOn == false)
             {
-                Console.Clear();
+                
             Console.WriteLine("Welcome to P1 Clearance Store");
             Console.WriteLine("1) Already a CSuromer: Login in");
             Console.WriteLine("2) Sign Up for New Account");
@@ -63,7 +63,7 @@ namespace P1FrontEnd
                 switch (Console.ReadLine())
                 {
                     case "1":
-                        Login();
+                       Login(username,password);
                         break;
                     case "2":
                         RegisterAccount(username,password,lname,fname,address);
@@ -71,44 +71,55 @@ namespace P1FrontEnd
                     case "3":
                         System.Environment.Exit(1);
                      break;
-                    default:
-                     break;
+                     default:
+                        Console.WriteLine("That wasn't a valid choice. Please try again.");
+                        break;
+                    
                
                 }   
             } 
         }
 
         //Login method
-        public static void Login()
+        public static void Login(string username, string secretcode)
         {
-              string username = ""; string secretcode ="";//string lname = ""; string fname = "";string address = "";
+               username = "";  secretcode ="";//string lname = ""; string fname = "";string address = "";
             
-             P1RepoClass prc = new P1RepoClass();
+              P1RepoClass prc = new P1RepoClass();
 
             P1StoreBusinessClass cb = new P1StoreBusinessClass(prc);
-
-              Customer currentCustomer = new Customer();
-                  //string StoreUsername = $"{currentCustomer.Username}"; string storeSecretcode = $"{currentCustomer.secretcode}"; 
+            //List<Customer> customers = cb.CustomerList();
+            Customer currentCustomer =new Customer();
+            string StoreUsername = $"{currentCustomer.Username}"; string storeSecretcode = $"{currentCustomer.secretcode}";
             //int loginAttempts = 0;
 
             //Simple iteration upto three times
             
-            
+            bool moveOn = false;// this is to signify that the user correctly entered the value.
+            while (moveOn == false)
+            {
                 Console.WriteLine("Enter username");
                 username = Console.ReadLine();
                 Console.WriteLine("Enter password");
                  secretcode = Console.ReadLine();
-               
-                if (username != $"{currentCustomer.Username}" || secretcode != $"{currentCustomer.secretcode}")
-                  {
-                      Console.WriteLine("Login failure"); 
-                      MainMenu();
-                  } 
-                else
-                {
-                     Console.WriteLine("Login successful");
-                    ShowCustomerInfo();
-                }
+                  moveOn = true;
+                    if (username != storeSecretcode || secretcode != storeSecretcode)
+                         {
+                             Console.WriteLine("Login failure"); 
+                            
+                               StoreOptions(username, secretcode);
+                             
+                        } 
+                    else 
+                        {
+                            Console.WriteLine("Login successful");
+                             //StoreOptions(username, secretcode);
+                            ShowCustomerInfo();
+                        }
+
+            }
+                
+                
                    
              
 
@@ -158,14 +169,15 @@ namespace P1FrontEnd
         //Displays the Customer info
         public static void ShowCustomerInfo()
         {
-            string username ="";  string secretcode ="";//string lname =""; string fname =""; string address = "";
+            string username ="";  string secretcode =""; //string lname =""; string fname =""; string address = "";
             P1RepoClass prc = new P1RepoClass();
 
             P1StoreBusinessClass cb = new P1StoreBusinessClass(prc);
-            Customer CurrentCustomer = new Customer();
+            Customer currentCustomer = new Customer();
 
             
-            Customer currentCustomer = cb.CurrentCustomer(username);
+           
+            
            
             
             Console.WriteLine("Username" + $"{currentCustomer.Username}");
@@ -196,7 +208,7 @@ namespace P1FrontEnd
             switch (Console.ReadLine())
             {
                 case"1":
-                   Login();
+                  Login(username,password);
                     break;
                 case "2":
                     //AddCartFunction;

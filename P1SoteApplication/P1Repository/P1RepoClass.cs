@@ -55,7 +55,7 @@ namespace P1Repository
                 
         }
 
-        public Customer CurrentCustomer(String Username)
+        public Customer CurrentCustomer(String Username, String LastName,String FirstName,String Address, String secretcode)
         {
                 string myQuery1 =  $"SELECT * FROM dbo.P1StoreCustomer ;";
             //this using block creates teh SqlConnection...string LastName, string FirstName,string Address, string secretcode
@@ -64,20 +64,29 @@ namespace P1Repository
             {
              //The SqlCommand object uses the query text along with the SqlConnection object to open a connection and send the query.
                 SqlCommand command = new SqlCommand(myQuery1, query1);
+                command.Parameters.AddWithValue("@U", Username);
+                command.Parameters.AddWithValue("@L", LastName);
+                command.Parameters.AddWithValue("@F", FirstName);
+                command.Parameters.AddWithValue("@a", Address);
+                command.Parameters.AddWithValue("@s", secretcode);
                 command.Connection.Open();//open the connection to the Db
-                SqlDataReader results = command.ExecuteReader();//actually conduct the query.
-
-                //query the FamilyRepository Db for the list of members
-                //USE ADO.NET .........
-                //use the mapper to transfer the falues in to Member objects in a List<Member>.
-                Customer cl = new Customer();
-                while (results.Read())
-                {
-                    cl.Equals(this._mapper.DboToP1StoreCustomer(results));//send in the row of the reader to be mapped.
-                }
+               int results = command.ExecuteNonQuery();//actually conduct the query.
 
                 query1.Close();
-                return cl;
+                if(results == 1)
+                {
+                    Customer c = new Customer
+                    {
+                        CustomerID = 1,
+                        Username = Username,
+                        LastName = LastName,
+                        FirstName = FirstName,
+                        Address = Address,
+                        secretcode = secretcode
+
+                    };
+                    return c;
+                }return null;
             }   
         }
         
