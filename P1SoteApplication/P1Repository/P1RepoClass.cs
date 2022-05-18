@@ -57,7 +57,7 @@ namespace P1Repository
 
         public Customer CurrentCustomer(String Username, String LastName,String FirstName,String Address, String secretcode)
         {
-                string myQuery1 =  $"SELECT * FROM dbo.P1StoreCustomer ;";
+                string myQuery1 =  $"SELECT * FROM P1StoreCustomer;";
             //this using block creates teh SqlConnection...string LastName, string FirstName,string Address, string secretcode
             // the SqlConnection is the object that communicates with the Db.
             using (SqlConnection query1 = new SqlConnection(connectionString))
