@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+     body {
+    font-family: sans-serif;
+    font-size: medium;
+    background: #eac90f
+}
+
+p {
+    color: #615e5e;
+    /* font-size: 30px; */
+    font-weight: bold;
+    padding: 6px 24px;
+
+}
+
+.container {
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    column-gap: 2em;
+    row-gap: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    height: fit-content;
+
+
+}
+
+input[type=button] {
+
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(to bottom, #d8d06e 5%, #e9e9e9 100%);
+    background-color: #db0d0d;
+    border-radius: 6px;
+    border: 1px solid #b1aeae;
+    display: inlineblock;
+    align-items: center;
+    cursor: pointer;
+    color: #666666;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+}
+
+.input[type=button]:hover {
+    background: linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+    background-color: #706d6d;
+}
+
+.input[type=button]:active {
+    position: relative;
+    top: 1px;
+}
+
+input[type=text] {
+
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    border: 1px solid #d8d5d5;
+    padding: 8px;
+    text-decoration: none;
+
+}
+
+h4 {
+
+    color: #615e5e;
+    /* font-size: 30px; */
+    font-weight: bold;
+    padding: 6px 24px;
+}
+
+table {
+    /* color: #615e5e; */
+    /* display: inline-flex;
+    flex-direction: column; */
+    padding: 10px;
+    border-collapse: collapse;
+    text-align: left;
+    /* border: 1px rgb(221, 17, 129);
+    border-style: solid; */
+
+}
+
+table td {
+    padding: 10px;
+
+}
+
+table tbody tr {
+
+    font-weight: bold;
+    color: rgb(93, 93, 219);
+
+}
+   </style>
+<script>
+  function reset() {
+
+location.reload()
+
+}
+
+
+function result() {
+
+
+const inputstart = document.getElementById('input').value;
+const numberstart = parseInt(inputstart);
+const input = document.getElementById('input2').value;
+const number = parseInt(input);
+const print = document.getElementById('output').getElementsByTagName('tbody')[0];
+
+
+
+for (let i = numberstart; i <= number; i++) {
+
+
+    if (i % 3 === 0 && i % 5 === 0) {
+
+        print.insertRow().insertCell().innerHTML = 'SweetnSalty'
+
+    } else if (i % 3 === 0) {
+
+        print.insertRow().insertCell().innerHTML = 'Sweet'
+
+    } else if (i % 5 === 0) {
+
+        print.insertRow().insertCell().innerHTML = 'Salty'
+
+    } else {
+
+        print.insertRow().insertCell().innerHTML = i
+    }
+
+}
+
+}
+</script>
+
+    <title>The Sweetm"Salty Game</title>
+</head>
+
+<body>
+    <p>
+       The Sweetm"Salty Game" The point here is to input an number and watch it spit out sweet for multiples of there and Salty for ultiples of five.
+    </p>
+    <div class='container'>
+ 
+        <h4>Please enter Starting number</h4>
+
+        <input id='input' type="text" min=1>
+        
+        <h4>Please enter Ending number</h4>
+
+        <input id='input2' type="text" min=1 >
+        
+        <input type="button" onclick="result()" value="Enter">
+
+        <input type="button" onclick="reset()" value="Reset">
+
+        <table id = 'output'>
+            <tbody>
+
+            </tbody>
+
+            
+        </table>
+
+    </div>
+</body>
+
+</html>
