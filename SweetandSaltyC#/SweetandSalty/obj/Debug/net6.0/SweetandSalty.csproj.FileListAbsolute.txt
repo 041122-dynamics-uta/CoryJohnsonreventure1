@@ -1,0 +1,15 @@
+C:\Users\newso\CoryJohnsonreventure1\SweetandSaltyC#\SweetandSalty\bin\Debug\net6.0\SweetandSalty.exe
+C:\Users\newso\CoryJohnsonreventure1\SweetandSaltyC#\SweetandSalty\bin\Debug\net6.0\SweetandSalty.deps.json
+C:\Users\newso\CoryJohnsonreventure1\SweetandSaltyC#\SweetandSalty\bin\Debug\net6.0\SweetandSalty.runtimeconfig.json
+C:\Users\newso\CoryJohnsonreventure1\SweetandSaltyC#\SweetandSalty\bin\Debug\net6.0\SweetandSalty.dll
+C:\Users\newso\CoryJohnsonreventure1\SweetandSaltyC#\SweetandSalty\bin\Debug\net6.0\SweetandSalty.pdb
+C:\Users\newso\CoryJohnsonreventure1\SweetandSaltyC#\SweetandSalty\obj\Debug\net6.0\SweetandSalty.csproj.AssemblyReference.cache
+C:\Users\newso\CoryJohnsonreventure1\SweetandSaltyC#\SweetandSalty\obj\Debug\net6.0\SweetandSalty.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\newso\CoryJohnsonreventure1\SweetandSaltyC#\SweetandSalty\obj\Debug\net6.0\SweetandSalty.AssemblyInfoInputs.cache
+C:\Users\newso\CoryJohnsonreventure1\SweetandSaltyC#\SweetandSalty\obj\Debug\net6.0\SweetandSalty.AssemblyInfo.cs
+C:\Users\newso\CoryJohnsonreventure1\SweetandSaltyC#\SweetandSalty\obj\Debug\net6.0\SweetandSalty.csproj.CoreCompileInputs.cache
+C:\Users\newso\CoryJohnsonreventure1\SweetandSaltyC#\SweetandSalty\obj\Debug\net6.0\SweetandSalty.dll
+C:\Users\newso\CoryJohnsonreventure1\SweetandSaltyC#\SweetandSalty\obj\Debug\net6.0\refint\SweetandSalty.dll
+C:\Users\newso\CoryJohnsonreventure1\SweetandSaltyC#\SweetandSalty\obj\Debug\net6.0\SweetandSalty.pdb
+C:\Users\newso\CoryJohnsonreventure1\SweetandSaltyC#\SweetandSalty\obj\Debug\net6.0\SweetandSalty.genruntimeconfig.cache
+C:\Users\newso\CoryJohnsonreventure1\SweetandSaltyC#\SweetandSalty\obj\Debug\net6.0\ref\SweetandSalty.dll
