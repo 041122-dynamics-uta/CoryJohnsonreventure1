@@ -1,0 +1,6 @@
+C:\Users\newso\CoryJohnsonreventure1\P1SoteApplication\Testingp1Storeapplication.tests\bin\Debug\net6.0\CoverletSourceRootsMapping
+C:\Users\newso\CoryJohnsonreventure1\P1SoteApplication\Testingp1Storeapplication.tests\obj\Debug\net6.0\Testingp1Storeapplication.tests.csproj.AssemblyReference.cache
+C:\Users\newso\CoryJohnsonreventure1\P1SoteApplication\Testingp1Storeapplication.tests\obj\Debug\net6.0\Testingp1Storeapplication.tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\newso\CoryJohnsonreventure1\P1SoteApplication\Testingp1Storeapplication.tests\obj\Debug\net6.0\Testingp1Storeapplication.tests.AssemblyInfoInputs.cache
+C:\Users\newso\CoryJohnsonreventure1\P1SoteApplication\Testingp1Storeapplication.tests\obj\Debug\net6.0\Testingp1Storeapplication.tests.AssemblyInfo.cs
+C:\Users\newso\CoryJohnsonreventure1\P1SoteApplication\Testingp1Storeapplication.tests\obj\Debug\net6.0\Testingp1Storeapplication.tests.csproj.CoreCompileInputs.cache

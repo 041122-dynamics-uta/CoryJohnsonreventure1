@@ -1,0 +1,57 @@
+--Create DATABASE P1StoreDatabase;
+
+Create TABLE [P1StoreDatabase.Customer](
+CustomerID int PRIMARY KEY Identity NOT NULL ,
+Username varchar(255) NOT NULL ,
+LastNanme varchar(255) NOT NULL ,
+FirstName varchar(255) NOT NULL ,
+Address varchar(255) NOT NULL ,
+StoreID int FOREIGN KEY References );
+GO
+ Create TABLE [P1StoreDatabase.Product](
+ ProductID int Primary KEy not null,
+ ItemName varchar(255) not null,
+ ItemDescribtion varchar(MAX) null,
+ ItemPrice MONEY not null,
+ ItemQuantity int not null,
+ StoreID int FOreign KEY references );
+GO
+ Create TABLE [P1StoreDatabase.Orders](
+ Orderid int primary key identity not null,
+ ItemsOderred varcar (MAX)not null,
+ OrderTotal Money not null,
+ storeID int Foreign key
+ );
+GO
+Create TABLE [P1StoreDatabase.Store](
+StoreID int Primary key indentity not mull,
+StoreAddress varchar (255) not null,
+CustomersLinked varchar(255) not null);
+GO
+Create TABLE [P1StoreDatabase.store1](
+StoreProductID int PRIMARY KEY identity not null,
+productID int FOREIGN KEY References,
+ItemName varchar(255) FOREIGN KEY References ,
+ItemDescribtion varchar(MAX) FOREIGN KEY References,
+ ItemPrice MONEY FOREIGN KEY References,
+ ItemQuantity int FOREIGN KEY References)
+GO
+Create TABLE [P1StoreDatabase.store2](
+StoreProductID int primary identity not null,
+productID int FOREIGN KEY References n,
+ItemName varchar(255) FOREIGN KEY References,
+ItemDescribtion varchar(MAX) FOREIGN KEY References,
+ItemPrice MONEY FOREIGN KEY References,
+ItemQuantity int FOREIGN KEY References)
+GO
+Create TABLE [P1StoreDatabase.store3](
+StoreProductID int primary identity not null,
+productID int FOREIGN KEY References not null,
+ItemName varchar(255) FOREIGN KEY References not null,
+ItemDescribtion varchar(MAX) FOREIGN KEY References null,
+ ItemPrice MONEY FOREIGN KEY References not null,
+ ItemQuantity int FOREIGN KEY References not null)
+GO
+
+SELECT * FROM P1StoreDatabase.store1
+ 
