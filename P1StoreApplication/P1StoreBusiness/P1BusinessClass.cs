@@ -35,26 +35,43 @@ public class P1StoreBusinessClass
         return ot;
     }
 
-
-    public Orders NewOrders(string ItemsOrdered, float OrderTotal)
+    public List<Orders> PastOrders()
     {
-        Orders ol = _repo.NewOrders(ItemsOrdered,OrderTotal);
+        List<Orders> ot = _repo.PastOrders();
+        return ot;
+    }
+
+    public Product GetPtice(int productID)
+    {
+        Product pl = _repo.GetPrice(productID);
+        return pl;
+    }
+
+
+    public Orders NewOrders(int CustomerID, int StoreID, int ProductID, int Quantity, float OrderTotal)
+    {
+        Orders ol = _repo.NewOrders(CustomerID, StoreID, ProductID, Quantity, OrderTotal);
         return ol;
     }
 
     public Customer CustomerLogin(string username, string password)
     {
-            Customer cl = _repo.CustomerLogin(username,password);
-            return  cl;
+            return new Customer("Ron", "Johnson", username, password);
+            //Customer cl = _repo.CustomerLogin(username,password);
+            //return  cl;
     }
-     public Customer NewCustomer(string username, string lname, string fname,string address, string secretcode)
+     public Customer NewCustomer(string username, string lname, string fname,string address, string password)
     {
-        Customer cl = _repo.NewCustomer(username,lname,fname,address,secretcode);
+        bool Exist = _repo.CredentialChecker(username, password);
+        
+        Customer cl = _repo.NewCustomer(username,lname,fname,address, password);
         return cl;
     }
 
      public Customer CurrentCustomer(string username, string lname, string fname,string address, string password)
     {
+        bool Exist = _repo.CredentialChecker(username, password);
+        
         Customer cl = _repo.CurrentCustomer(username,lname,fname,address,password);
         return cl;
     }

@@ -17,12 +17,21 @@ namespace P1FrontEnd
             P1StoreBusinessClass cb = new P1StoreBusinessClass(prc);
 
             Customer LoggedInCuster;
-            
+            List<Store> StoreOptions;
+            List<Product> StoreProducts;
+             List<Orders> pastOrders;
+            Product PriceItem;
+            int customerID;
+            int storeID;
            //MainMenu to login or register
+           int OrderQuantity = 0;
+           float TotalOrder = 0.00f;
+           Orders ChekoutOrder;
+          
             Console.WriteLine("Welcome to P1 Clearance Store");
            
-            Console.WriteLine("3) Exit");
-            Console.Write("\r\nSelect an option: ");
+            //Console.WriteLine("3) Exit");
+            //Console.Write("\r\nSelect an option: ");
             ConsoleKeyInfo key ;
            
            
@@ -53,7 +62,7 @@ namespace P1FrontEnd
                     }
                     else
                     {
-                        Console.WriteLine($"Welcom,{LoggedInCuster.FirstName}");
+                        Console.WriteLine($"Welcome,{LoggedInCuster.Username}");
                     }break;
 
                 }    
@@ -84,8 +93,8 @@ namespace P1FrontEnd
                     }
                     while(fname.Length > 30 || lname.Length > 30);
                
-                    do
-                    {
+                        do
+                        {
                             Console.Write("Enter username: ");
                             username = Console.ReadLine();
                             Console.Write("Enter password: ");
@@ -99,7 +108,7 @@ namespace P1FrontEnd
                         while(username.Length > 30 || password.Length > 30); 
                               
                     
-                        LoggedInCuster = cb.CurrentCustomer(fname,lname,address,username,password);
+                        LoggedInCuster = cb.NewCustomer(fname,lname,address,username,password);
                         if(LoggedInCuster == null)
                         {
                                 continue;
@@ -110,199 +119,106 @@ namespace P1FrontEnd
              
                  } 
 
-             
-            //Console.Clear();
-            Console.WriteLine("P1 Clearance Store Menu");
-             Console.WriteLine("Make a Selection");
-            Console.WriteLine("1) Show Stores");
-            Console.WriteLine("2) Remove From cart");
-            Console.WriteLine("3) View Cart");
-            Console.WriteLine("4) View Products");
-            Console.WriteLine("5) Checkout");
-            Console.WriteLine("6) Back To Customer Account Info");
-            Console.WriteLine("7) Exit");
-            Console.Write("\r\nSelect an option: ");
- 
-            switch (Console.ReadLine())
+            do
             {
-                case"1":
-                   //Show Stores
-                    break;
-                case "2":
-                    //AddCartFunction;
-                   
-                   Console.WriteLine("What would you like to buy?");
-                    break;
-                case "3":
-                    //ViewCart
-                    //Prompt for Checkout
-                    break;
-                    case "4":
-                  //ShowProducts();
-                    break;
-                case "5":
-                    //Checkout();
-                    break;
-                case "6":
-                    //Checkout();
-                    break;
-                case "7":
-                    System.Environment.Exit(1);
-                    break;
-                default:
-                    break;
-               
-            }   
-        
-           
-                /**Console.WriteLine("Username" + $"{currentCustomer.Username}");
-                    //Console.Write();
-                    //Console.Write("Renter password: ");
-                    Console.Write(" First name: " + $"{currentCustomer.FirstName}");
-                    Console.Write("Last Name: " + $"{currentCustomer.LastName}");
-                    Console.Write("Address: " + $"{currentCustomer.Address}");**/
-                        
-                        
-                            //System.Environment.Exit(1);
-                        
-                            //Showw Stores
+                   Console.WriteLine("P1  Store Center");
+             Console.WriteLine("How can we help you?");
+             Console.WriteLine("1) Show Stores");
+             Console.WriteLine("2) View Products");
+            
+            key =Console.ReadKey();
+            //Console.WriteLine(key.Key.ToString());
+            }
+            while(String.Compare(key.Key.ToString(), "D1")!= 0 && 
+            String.Compare(key.Key.ToString(), "D2")!= 0 && String.Compare(key.Key.ToString(), "D3")!= 0 );
+            }
+            
+            while(true)
+            {
+                        if(String.Compare(key.Key.ToString(), "D1")== 0 )
+                        {
+                             StoreOptions = cb.StoreList();
 
-                    //readonly int storeID;
-                
-                /** Console.WriteLine("Welcome to P1 Clearance Store");
-                    Console.WriteLine("Select Store");
-                    Console.WriteLine("1) Store 1");
-                    Console.WriteLine("2) Store 2");
-                    Console.WriteLine("3) Store 3");
-                    Console.WriteLine("4) Back To Customer Account Info");
-                    Console.WriteLine("5) Exit");
-                    
-        
-                    switch (Console.ReadLine())
-                    {
-                        case "1":
-                        //Store 1;
-                        sqlComm.CommandText = $"SELECT * FROM * FROM [dbo].[P1StoreProduct] WHERE StoreID = 10";
-                            break;
-                        case "2":
-                            //Store 2;
-                            sqlComm.CommandText = $"SELECT * FROM * FROM [dbo].[P1StoreProduct] WHERE StoreID = 15";
-                            break;
-                        case "3":
-                            //Store3;
-                            sqlComm.CommandText = $"SELECT * FROM * FROM [dbo].[P1StoreProduct] WHERE StoreID = 20";
-                            break;
-                        case "4":
-                            break;
-                        case "5":
+                            foreach (Store s in StoreOptions)
+                            {
+                                Console.WriteLine($"The member is {s.StoreID} {s.StoreName} {s.StoreLocation}");
+                            }
+                            Console.WriteLine("Witch Stoe would like to shop at?");
+                             storeID = Convert.ToInt32(Console.ReadLine());
+                        }
+                        else if(String.Compare(key.Key.ToString(), "D2")== 0)
+                        {
+                            pastOrders = cb.PastOrders();
+
+                            foreach (Orders o in pastOrders)
+                            {
+                                Console.WriteLine($"The member is {o.OrderID} {o.CustomerID}  {o.Quantity} {o.Product} {o.StoreID}");
+                            }
+                            Console.WriteLine("Witch Stoe would like to shop at?");
+                             storeID = Convert.ToInt32(Console.ReadLine());
+                        }
+                        else if(String.Compare(key.Key.ToString(), "D3")== 0 )
+                        {
+                            StoreProducts = cb.ProductList();
+
+                            foreach (Product p in StoreProducts)
+                            {
+                                Console.WriteLine($" {p.ProductID} {p.Itemname} {p.ItemDescription} {p.ItemPrice}");
+                            }
+                             Console.WriteLine("Witch item would like to purchase?");
+                            int productID = Convert.ToInt32(Console.ReadLine());
+                             PriceItem = cb.GetPtice(productID);
+                            float itemPrice = Convert.ToInt16($"{PriceItem.ItemPrice}");
+                                Console.WriteLine("Would you like to purchase this item");
+                                string Response = Console.ReadLine();
+                                if(Response == "yes" || Response == "y")
+                                {
+                                             OrderQuantity = OrderQuantity + 1;
+                                             TotalOrder = TotalOrder +  itemPrice;
+                                }
+                                else if(Response == "no" || Response == "n")
+                                {
+                                        continue;
+                                }
+
+                            //Ask to Ckeckout
+                            customerID = Convert.ToInt16(($"{LoggedInCuster.CustomerID}"));
+                            storeID = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("Do you want to checkout?");
+                             if(Response == "yes" || Response == "y")
+                                {
+                                      if(TotalOrder > 500)
+                                      {
+                                          Console.WriteLine("Order is too high Please make adjustments.");
+                                          continue;
+                                      }
+                                      else
+                                      {
+                                          ChekoutOrder = cb.NewOrders(customerID, storeID, productID,  OrderQuantity, TotalOrder);       
+                                      }
+                                      
+                                }
+                                else if(Response == "no" || Response == "n")
+                                {
+                                        continue;
+                                }
+
+                        }
+                        else if (String.Compare(key.Key.ToString(), "D4")== 0 )
+                        {
                             System.Environment.Exit(1);
-                            break;
-                        default:
-                            break;**/
-
-
-                    //Show Products
-
-                        /**P1StoreBusinessClass pb = new P1StoreBusinessClass(prc);
-
-                    Product SelectProduct = new Product();
-                    Console.WriteLine("ProductID  Itemname     ItemDescription  ItemPrice    ItemQuanity}.....");
-                    List<Product> products = pb.ProductList();
-                    foreach(Product p in products)
-                    {
-                        Console.WriteLine($"{p.ProductID}{p.Itemname}{p.ItemDescription}{p.ItemPrice}{p.ItemQuanity}.....");
-                    }**/
-
-
-
-
-
-                    //Add to Cart
-                    //int OrderQuantity = 0;
-                    
-                        //ItemsOrdered = "";
-                        //float OrderTotal = 0.00f;
-                        
-                        //order = order + 1;
-                        //ItemsOrdered = ""; 
-                        //OrderTotal = OrderTotal + 1;
-
-                    //Finally Checkout
-                    
-            
-
-                
-
+                        }
+            }
+          
             
             
-                //Register new Customer Account
-                
-
-                //Displays the Customer info
-            
-
-                //Select Store and Find items Logic
-                
-                
-                
-                //View Products from store
-                
-                
-            //Shop logic 
-            
-
-            
-                
-                //Make and cancel purchases
-                /**public static void Checkout()
-                {
-                    
-                    string username = ""; string password = "";
-                    string ItemsOrdered = ""; float OrderTotal = 0.00f;
-                    P1RepoClass prc = new P1RepoClass();
-
-                    P1StoreBusinessClass ob = new P1StoreBusinessClass(prc);
-
-                    Orders newOrder = ob.NewOrders(ItemsOrdered,OrderTotal);
-                    //int orderCount = 0;
-                    
-                        
-                    //Console.Clear();
-                    Console.WriteLine("Welcome to P1 Clearance Store");
-                    Console.WriteLine(" Are you sure Sure?");
-                    Console.WriteLine("1) YES");
-                    Console.WriteLine("2) NO");
-                    Console.WriteLine("3) Exit");
-                    Console.Write("\r\nSelect an option: ");
-                        
-                    switch (Console.ReadLine())
-                    {
-                        case "1":
-                            ItemsOrdered = $"{newOrder.ItemsOrdered}";
-                        OrderTotal = 0.00f; 
-                            OrderTotal= OrderTotal + float.Parse($"{newOrder.OrderTotal}");
-                            Console.WriteLine("Item Ordered was"+ ItemsOrdered + "and your total is"+ OrderTotal );
-                        //SqlCommand sqlComm = new SqlCommand();
-
-                //sqlComm.CommandText = $"INSERT INTO P1StoreOders (ItemsOrdered, OrderTotal ) VALUES  (@var);";
-                //sqlComm.AddWithValue("@var", ItemsOrdered, OrderTotal);
-                            StoreOptions(username, password);
-                            break;
-                        case "2":
-                            StoreOptions(username, password);
-                            break;
-                        default:
-                            break;
-                    
-                    }
-                }**/
-              
-        }
+           
+               
         
 
 
 
     
-    }
+        }
     }
 }

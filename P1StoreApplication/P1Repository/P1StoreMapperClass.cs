@@ -50,21 +50,21 @@ namespace P1Repository
             return p;
         }
 
-        /**internal Orders DboToP1StoreOrders(SqlDataReader reader)
+        internal Orders DboToP1StoreOrders(SqlDataReader reader)
         {
                 Orders o = new Orders
             {
-                OrderID = (int)reader[0],
-                OrderQuantity = (string)reader[1],
-                OrderTotal = (float)reader[2]
-                
-                
+            
+                Quantity = (int)reader[0],
+                OrderTotal = (float)reader[1]
+               };
+            return o;   
+         }        
                 
 
                
-            };
-            return o;
-        }**/
+          
+       
     
     }
 
